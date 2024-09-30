@@ -1,0 +1,124 @@
+﻿/* Shopping Cart Container */
+.shopping-cart-container {
+    max-width: 800px; /* Maksimum genişlik */
+    margin: 20px auto; /* Orta hizalama */
+    padding: 20px; /* İç boşluk */
+    border: 1px solid #ccc; /* Kenar rengi */
+    border-radius: 8px; /* Kenar yuvarlama */
+    background-color: #f9f9f9; /* Arka plan rengi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+/* Header Style */
+.shopping-cart-header {
+    text-align: center; /* Metni ortala */
+    color: #333; /* Yazı rengi */
+    margin-bottom: 20px; /* Alt boşluk */
+    font-size: 24px; /* Yazı boyutu */
+}
+
+/* Shopping Cart Content */
+.shopping-cart-content {
+    display: flex; /* Esnek kutu düzeni */
+}
+
+/* Product Wrapper */
+.shopping-cart-product-wrapper {
+    flex: 2; /* Ürün kısmı daha geniş olacak */
+    display: flex; /* Ürün kartlarını yan yana yerleştir */
+    flex-wrap: wrap; /* Taşma durumunda satır atlama */
+    gap: 15px; /* Ürünler arasında boşluk */
+}
+
+/* Product Card */
+.shopping-cart-product-card {
+    display: flex; /* Esnek düzen */
+    align-items: center; /* Ortala */
+    border: 1px solid #ddd; /* Ürün kartı kenar rengi */
+    border-radius: 8px; /* Yuvarlatılmış kenar */
+    padding: 10px; /* İç boşluk */
+    background-color: #fff; /* Ürün kartı arka plan rengi */
+    transition: transform 0.3s; /* Geçiş efekti */
+    width: 400px; /* Genişliği artırdık */
+    box-sizing: border-box; /* Kenar ve iç boşlukları dahil et */
+}
+
+    .shopping-cart-product-card:hover {
+        transform: scale(1.02); /* Hoverda hafif büyüme efekti */
+    }
+
+/* Product Image */
+/* Product Image */
+.shopping-cart-product-image {
+    width: 80px; /* Genişliği ayarla */
+    height: 80px; /* Yüksekliği ayarla, kartın yüksekliğiyle eşit olsun */
+    object-fit: cover; /* Resmin kartın içine uyumlu bir şekilde yerleşmesini sağlar */
+    margin-right: 10px; /* Sağ boşluk */
+}
+
+
+/* Product Info */
+.shopping-cart-product-info {
+    display: flex; /* Esnek düzen */
+    align-items: center; /* Dikey ortalama */
+    justify-content: flex-start; /* Soldan hizala */
+    gap: 10px; /* Butonlar ve yazı arasında boşluk */
+}
+
+/* Product Title */
+.shopping-cart-product-title {
+    font-size: 18px; /* Yazı boyutu */
+    margin: 0 10px; /* Yan boşluk */
+}
+
+/* Quantity Display */
+.shopping-cart-quantity {
+    min-width: 30px; /* Miktar yazısı için minimum genişlik */
+    text-align: center; /* Ortala */
+    font-size: 18px; /* Yazı boyutu */
+}
+
+/* Quantity Buttons */
+.shopping-cart-quantity-button {
+    background-color: #ff8c00; /* Arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    border: none; /* Kenar yok */
+    border-radius: 4px; /* Kenar yuvarlama */
+    padding: 5px 10px; /* İç boşluk */
+    cursor: pointer; /* İmleç değişimi */
+    transition: background-color 0.3s; /* Geçiş efekti */
+}
+
+    .shopping-cart-quantity-button:hover {
+        background-color: #ff7b00; /* Hoverda renk değişimi */
+    }
+
+/* Total Section */
+.shopping-cart-total-section {
+    flex: 1; /* Sağ kısım genişliği */
+    margin-left: 20px; /* Sol boşluk */
+    display: flex; /* Esnek düzen */
+    flex-direction: column; /* Dikey sıralama */
+    justify-content: flex-start; /* Üstten hizalama */
+}
+
+/* Total Price */
+.shopping-cart-total-price {
+    font-weight: bold; /* Kalın yazı */
+    margin-bottom: 10px; /* Alt boşluk */
+}
+
+/* Checkout Button */
+.shopping-cart-checkout-button {
+    background-color: #4caf50; /* Yeşil arka plan rengi */
+    color: #fff; /* Beyaz yazı rengi */
+    border: none; /* Kenar yok */
+    border-radius: 4px; /* Kenar yuvarlama */
+    padding: 10px 20px; /* İç boşluk */
+    cursor: pointer; /* İmleç değişimi */
+    transition: background-color 0.3s; /* Geçiş efekti */
+}
+
+    .shopping-cart-checkout-button:hover {
+        background-color: #45a049; /* Hoverda yeşil ton değişimi */
+    }

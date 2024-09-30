@@ -1,0 +1,28 @@
+﻿.product-detail-container {
+    display: flex;
+    max-width: 1000px; /* Ekranın genişliğine göre ayarlayabilirsiniz */
+    margin: auto;
+    align-items: flex-start; /* Üstten hizalamak için */
+}
+
+.product-detail-image-card {
+    flex: 0 0 60%; /* Ekranın %60'ını kaplar */
+    padding: 10px;
+    border: 1px solid #ccc; /* Kart için sınır */
+    border-radius: 8px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
+}
+
+.product-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; /* Resim kenar yuvarlama */
+}
+
+.product-detail-info {
+    flex: 0 0 40%; /* Ekranın %40'ını kaplar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Üstten başlat */
+}

@@ -1,0 +1,64 @@
+﻿/* Genel Navbar Stil */
+.navbar {
+    background-color: #ff6600; /* Turuncu arka plan rengi */
+    border-radius: 0; /* Köşe yuvarlatmayı kaldırır */
+    margin-bottom: 0; /* Alt boşluğu kaldırır */
+    border: none; /* Kenar çizgilerini kaldırır */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge efekti */
+}
+
+.navbar-brand {
+    color: #fff !important; /* Beyaz metin rengi */
+    font-size: 24px; /* Yazı boyutu */
+    font-weight: 600; /* Kalın yazı stili */
+    padding: 15px 20px; /* İç boşluk */
+    transition: color 0.3s ease; /* Renk geçiş efekti */
+}
+
+    .navbar-brand:hover {
+        color: #f0f0f0; /* Üzerine gelindiğinde renk değişir */
+    }
+
+.navbar-nav > li > a {
+    color: #fff !important; /* Beyaz metin rengi */
+    padding: 15px 20px; /* İç boşluk */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: 500; /* Normalden biraz kalın yazı stili */
+    border-radius: 4px; /* Köşe yuvarlatma */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Arka plan rengi ve metin rengi geçiş efekti */
+}
+
+/* Dropdown stil */
+.dropdown-submenu {
+    position: relative; /* Pozisyon ayarı */
+}
+
+.dropdown-menu {
+    display: none; /* Başlangıçta gizli */
+    position: absolute; /* Alt menüyü konumlandırmak için */
+    left: 0; /* Sol kenar hizalaması */
+    top: 100%; /* Ana menünün hemen altında */
+    background-color: #ff6600; /* Arka plan rengi */
+    border: none; /* Kenar çizgilerini kaldırır */
+    border-radius: 4px; /* Köşe yuvarlatma */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge efekti */
+    z-index: 1000; /* Diğer öğelerin üzerine çıkması için */
+}
+
+    .dropdown-menu > li > a {
+        color: #fff !important; /* Beyaz metin rengi */
+        padding: 10px 20px; /* İç boşluk */
+        transition: background-color 0.3s ease; /* Arka plan rengi geçiş efekti */
+    }
+
+        .dropdown-menu > li > a:hover {
+            background-color: #e65c00; /* Üzerine gelindiğinde arka plan rengi değişir */
+        }
+
+/* Responsive tasarım */
+@media (max-width: 767px) {
+    .navbar-nav {
+        float: none; /* Menü öğelerinin üst üste gelmesini sağlar */
+        text-align: center; /* Menü öğelerini ortalar */
+    }
+}

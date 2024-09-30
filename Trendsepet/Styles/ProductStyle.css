@@ -1,0 +1,134 @@
+﻿/* Ana wrapper, ürünler ve kategori listesi için düzen */
+.wrapper {
+    display: flex; /* Flex düzeni uygula */
+    margin: 0 auto; /* Ortalanması için */
+    padding: 20px 20px; /* Üst-alt boşluk */
+}
+
+/* Ürünlerin bulunduğu ana wrapper */
+.product-wrapper {
+    padding: 20px 20px; /* Üst-alt boşluk */
+    display: flex;
+    flex-direction: column; /* Ürünlerin dikey dizilimi */
+    background-color: #f9f9f9; /* Açık gri arka plan */
+    flex: 1; /* Kalan alanı kaplar */
+}
+
+/* Ürünlerin olduğu konteyner */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Ürünler satır olarak yan yana dizilir, sığmayanlar alt satıra geçer */
+    justify-content: center; /* Ürünleri yatayda ortalar */
+    gap: 20px; /* Ürünler arası boşluk */
+    max-width: 1200px; /* Ürünlerin olduğu alanı sınırlamak için */
+    margin: 20px 20px; /* Ortalamak için */
+}
+
+/* Ürün kartı */
+.product-card {
+    width: 18rem; /* Kart genişliği */
+    height: 300px; /* Sabit yükseklik */
+    border: 1px solid #ccc; /* Kart kenarlığı */
+    border-radius: 8px; /* Kenarları yuvarla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover efekti */
+    overflow: hidden; /* Taşma durumunda içeriği gizle */
+    background-color: #fff; /* Kart arka plan rengi */
+}
+
+    .product-card:hover {
+        transform: scale(1.05); /* Hover büyüme efekti */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover'da gölge artır */
+    }
+
+/* Ürün resmi */
+.product-card-img-top {
+    width: 100%; /* Resmin genişliği */
+    height: 200px; /* Sabit yükseklik */
+    object-fit: cover; /* Resmin boyutunu kapsayacak şekilde kesme */
+    border-radius: 8px 8px 0 0; /* Resmin üst kısmını yuvarlat */
+}
+
+/* Ürün kartı içeriği */
+.product-card-body {
+    padding: 15px; /* İç boşluk */
+    text-align: center; /* Yazıları ortala */
+}
+
+/* Ürün başlığı */
+.product-card-title {
+    font-size: 18px; /* Başlık boyutu */
+    margin: 10px 0; /* Üst ve alt boşluk */
+    color: #333; /* Koyu gri metin rengi */
+}
+
+/* Ürün fiyatı */
+.product-card-text {
+    font-size: 16px; /* Fiyat boyutu */
+    color: #ff6600; /* Turuncu fiyat rengi */
+    font-weight: bold; /* Kalın yazı */
+}
+
+/* Kategori listesi stili */
+.category-list {
+    width: 200px; /* Kategori listesi genişliği */
+    padding: 15px; /* İç boşluk */
+    background-color: #f8f8f8; /* Arka plan rengi */
+    border: 1px solid #ddd; /* Kenar çizgisi */
+    border-radius: 4px; /* Köşe yuvarlatma */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+/* Kategori bağlantısı stili */
+.category-link {
+    display: block; /* Bağlantıların blok olarak görünmesi için */
+    padding: 10px; /* İç boşluk */
+    color: #ff6600; /* Kategori bağlantı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+    /* Kategori bağlantısı üzerine gelindiğinde stili */
+    .category-link:hover {
+        background-color: #ff6600; /* Üzerine gelindiğinde arka plan rengi değişir */
+        color: #fff; /* Üzerine gelindiğinde metin rengi beyaz olur */
+    }
+
+.child-category-list {
+    display: none; /* Başlangıçta gizli */
+    padding-left: 15px; /* Sol boşluk */
+}
+
+.child-category-link {
+    display: block; /* Blok olarak görünmesi için */
+    padding: 8px; /* İç boşluk */
+    color: #333; /* Metin rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+    .child-category-link:hover {
+        background-color: #f0f0f0; /* Üzerine gelindiğinde arka plan rengi */
+        color: #ff6600; /* Üzerine gelindiğinde metin rengi değişir */
+    }
+
+/* Ana kategori altında alt kategorileri gizle */
+.main-category > [id$="ChildCategoryRepeater"] {
+    display: none; /* Alt kategorileri başlangıçta gizle */
+}
+
+/* Responsive tasarım */
+@media (max-width: 767px) {
+    .product-card {
+        width: 100%; /* Mobilde tam genişlik */
+        margin-bottom: 20px; /* Kartlar arasında alt boşluk */
+    }
+
+    .category-list {
+        width: 100%; /* Kategori listesi mobilde tam genişlik */
+        margin-bottom: 20px; /* Kategori ve ürünler arasında boşluk */
+    }
+
+    .wrapper {
+        flex-direction: column; /* Mobilde dikey düzen */
+        align-items: center; /* Ortala */
+    }
+}
